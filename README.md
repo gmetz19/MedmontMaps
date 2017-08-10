@@ -2,8 +2,7 @@
 Program on matlab that maps out the export from the Medmont
 upload csv Medmont files to output a color map to show rod and cone function
 
-MEDMONT MAP GRAPHS-------- The main script allows the user to choose from a menu of options to perform different functions which creates a map graph of 1. the cone function from the blue - red data on a 75 pt grid. 2. the rod function data from a cyan test 3. cone function from blue- red full data on 74 pt grid 4. rod function data from a full blue test. Only 75 of 103 points from the shire test are incorporated into the map grid because the program only keeps points that are spaced 12 units apart. There are only 74 points in the full test map becuase the full test does not test a specific point that the shire test does.
-
+MEDMONT MAP GRAPHS-------- The main script allows the user to choose from a menu of options to perform different functions which creates a map graph of 1. the cone function from the blue - red data on a 75 pt grid. 2. the rod function data from a cyan test Only 75 of 103 points from the shire test are incorporated into the map grid because the program only keeps points that are spaced 12 units apart. 
 Getting Started-----------
 
 Download this repository by cloning it and copy the clone URL for the repository
@@ -14,7 +13,7 @@ then type git clone and the the copied URL: git clone https://github.com/USERNAM
 
 Export medmont data and covert to a .csv file
 
-label as cyan or red, full or shire, left or right and save into the same folder with the matlab files
+label as cyan or red, left or right and save into the same folder with the matlab files
 
 Edit the csv files and delete the two rightmost columns: COLOR and STOPWATCH (Matlab dlmread cannot read any words below the header line specified)
 
@@ -24,9 +23,8 @@ Save output graph as a .jpg
 
 Additional information------
 
-shire tests 103 points but ouputs a map with a 75 or 74 point grid
 If Medmont updates the output excel file header, you can edit the code to change the number of header lines on line 7 where it says: file = csvread(openFile,18,0); and where it reads if it is a Right or Left eye: header = importdata(openFile,'',9); RoL = header{9};
 The RightLeftNorms.csv and the rightleftnormsFULL.csv file are comparison files with the values for normal, lower limit of normal,  disease rod, and suspect that correspond with the each x and y coordinates. The file also includes these values reordered for left eye data.
 The myGrid2.csv file has x and y coordinates for right or left eyes.
-Included in this repository are test files red and cyan for shire and red and blue full
-The shire test are updated with the new compare file of normal, diseased rod, and suspect. 
+Included in this repository are test files for cyan shire
+The compare file rightLeftNorms.csv of normal, diseased rod, and suspect has been updated
